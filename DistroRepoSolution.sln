@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistroRepo", "DistroRepo\DistroRepo.csproj", "{4541E048-81D3-4220-8906-D11FA22318BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistroRepoTest", "DistroRepoTest\DistroRepoTest.csproj", "{C7FCB2AB-44F9-43EF-99A2-178A0E8B2557}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4541E048-81D3-4220-8906-D11FA22318BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4541E048-81D3-4220-8906-D11FA22318BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4541E048-81D3-4220-8906-D11FA22318BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4541E048-81D3-4220-8906-D11FA22318BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7FCB2AB-44F9-43EF-99A2-178A0E8B2557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7FCB2AB-44F9-43EF-99A2-178A0E8B2557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7FCB2AB-44F9-43EF-99A2-178A0E8B2557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7FCB2AB-44F9-43EF-99A2-178A0E8B2557}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {77C8E107-FDBD-4257-99BD-222DC5070DEC}
+	EndGlobalSection
+EndGlobal

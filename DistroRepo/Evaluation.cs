@@ -15,14 +15,17 @@ public class Evaluation
     /// <param name="caseSensitive"></param>
     /// <returns></returns>
     /// <exception cref="Exception"></exception>
-    public bool Evaluate(Dictionary<string, string> attributes, bool caseSensitive = false)
+    public bool Evaluate(Dictionary<string, string> attributes, bool strictEvaluation = false)
     {
         if (attributes is null) return false;
         
         if (attributes.TryGetValue(AttributeName, out string? target))
         {
             if(target is null) return false;
-
+            
+            if(strictEvaluation) return EvaluateStrict(attributes, true);
+            
+            bool caseSensitive = false;
             return EvaluationType switch
             {
                 EvaluationType.Equals => (DateTime.TryParse(target, out DateTime dtt) && DateTime.TryParse(AttributeValue, out DateTime dta)) ? dtt == dta : (double.TryParse(target, out double lt) && double.TryParse(AttributeValue, out double la)) ? lt == la : EvaluateStrict(attributes, caseSensitive),
@@ -45,7 +48,7 @@ public class Evaluation
     /// <param name="caseSensitive"></param>
     /// <returns></returns>
     /// <exception cref="Exception"></exception>
-    public bool EvaluateStrict(Dictionary<string, string> attributes, bool caseSensitive = false)
+    private bool EvaluateStrict(Dictionary<string, string> attributes, bool caseSensitive = true)
     {
         if (attributes is null) return false;
 

@@ -9,7 +9,7 @@ public class Evaluation
     public EvaluationType EvaluationType { get; set; }
 
     /// <summary>
-    /// The evaluation is valid if the attribute value matches the evaluation type. First tries to cast the attribute to a DateTime, then to a double, then fails over to a straight string comparison
+    /// The evaluation is valid if the attribute value matches the evaluation type. If strict is false, tries to parse strings as dates or numbers and does case insensitive comparison.  If strict is true does straight string comparison with case sensitivity.
     /// </summary>
     /// <param name="attributes"></param>
     /// <param name="caseSensitive"></param>
@@ -42,7 +42,7 @@ public class Evaluation
     }
 
     /// <summary>
-    /// The evaluation is valid if the attribute value matches the evaluation type. Only does a straight string comparison.  Does not try to cast to DateTime or double.
+    /// Evaluation attempt that does not try to parse numbers and dates.
     /// </summary>
     /// <param name="attributes"></param>
     /// <param name="caseSensitive"></param>
